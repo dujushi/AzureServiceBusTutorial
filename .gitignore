@@ -340,4 +340,4 @@ ASALocalRun/
 healthchecksdb
 
 # XML Document
-Messaging.xml
+Messaging*.xml

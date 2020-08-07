@@ -3,12 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging", "Messaging\Messaging.csproj", "{33D52AE4-B4C7-4286-8608-36CAEC5EB1FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Messaging", "Messaging\Messaging.csproj", "{33D52AE4-B4C7-4286-8608-36CAEC5EB1FE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{71ACF908-0DC0-46B0-A053-92C139406C47}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging.Azure", "Messaging.Azure\Messaging.Azure.csproj", "{C11E48F8-145A-483B-A181-2EF36038FB1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging.Azure.UnitTests", "Messaging.Azure.UnitTests\Messaging.Azure.UnitTests.csproj", "{1E76F318-53BE-4DEA-B39D-6BD7E11EFBC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging.Azure.Demo", "Messaging.Azure.Demo\Messaging.Azure.Demo.csproj", "{19107E19-C1EE-4B62-84BA-B9B4C67D655D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +26,18 @@ Global
 		{33D52AE4-B4C7-4286-8608-36CAEC5EB1FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33D52AE4-B4C7-4286-8608-36CAEC5EB1FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33D52AE4-B4C7-4286-8608-36CAEC5EB1FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C11E48F8-145A-483B-A181-2EF36038FB1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C11E48F8-145A-483B-A181-2EF36038FB1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C11E48F8-145A-483B-A181-2EF36038FB1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C11E48F8-145A-483B-A181-2EF36038FB1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E76F318-53BE-4DEA-B39D-6BD7E11EFBC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E76F318-53BE-4DEA-B39D-6BD7E11EFBC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E76F318-53BE-4DEA-B39D-6BD7E11EFBC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E76F318-53BE-4DEA-B39D-6BD7E11EFBC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19107E19-C1EE-4B62-84BA-B9B4C67D655D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19107E19-C1EE-4B62-84BA-B9B4C67D655D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19107E19-C1EE-4B62-84BA-B9B4C67D655D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19107E19-C1EE-4B62-84BA-B9B4C67D655D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

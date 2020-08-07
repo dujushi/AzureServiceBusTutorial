@@ -8,3 +8,15 @@ dotnet_diagnostic.SA1633.severity = none
 
 # SA1629: Documentation text should end with a period
 dotnet_diagnostic.SA1629.severity = none
+
+# SA1309: Field names should not begin with underscore
+dotnet_diagnostic.SA1309.severity = none
+
+# SA1101: Prefix local calls with this
+dotnet_diagnostic.SA1101.severity = none
+
+# SA1201: Elements should appear in the correct order
+dotnet_diagnostic.SA1201.severity = none
+
+# xUnit1026: Theory methods should use all of their parameters
+dotnet_diagnostic.xUnit1026.severity = none
