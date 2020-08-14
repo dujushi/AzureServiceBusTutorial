@@ -19,7 +19,7 @@ steps:
   displayName: Test
   inputs:
     command: test
-    arguments: '--configuration $(buildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=$(Build.SourcesDirectory)/TestResults/Coverage/'
+    arguments: '--configuration $(buildConfiguration) --collect:"XPlat Code Coverage"'
     publishTestResults: true
     projects: '**/*Tests/*.csproj'
 
