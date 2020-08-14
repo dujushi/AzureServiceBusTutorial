@@ -3,7 +3,7 @@ using System.Reflection;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using Messaging.Azure.Attributes;
+using Messaging.Attributes;
 using Messaging.Azure.Interfaces;
 using Messaging.Azure.Models;
 using Messaging.Exceptions;
@@ -31,10 +31,10 @@ namespace Messaging.Azure
                 throw new ArgumentNullException(nameof(topicClientProvider));
             }
 
-            var attribute = typeof(T).GetCustomAttribute<ServiceBusTopicAttribute>();
+            var attribute = typeof(T).GetCustomAttribute<TopicAttribute>();
             if (attribute == null)
             {
-                throw new MessagingException($"Topic message should be decorated with the {nameof(ServiceBusTopicAttribute)}.");
+                throw new MessagingException($"Topic message should be decorated with the {nameof(TopicAttribute)}.");
             }
 
             _topicClient = topicClientProvider.Get(attribute.TopicName);

@@ -1,16 +1,16 @@
 ﻿using System;
 using Messaging.Exceptions;
 
-namespace Messaging.Azure.Attributes
+namespace Messaging.Attributes
 {
     /// <summary>
     /// Configures topic name and time to live value for the message
     /// </summary>
     [AttributeUsage(AttributeTargets.Class)]
-    public class ServiceBusTopicAttribute : Attribute
+    public class TopicAttribute : Attribute
     {
         /// <summary>
-        /// Gets the Azure Service Bus topic name to send this message to
+        /// Gets the topic name to send this message to
         /// </summary>
         public string TopicName { get; }
 
@@ -20,27 +20,27 @@ namespace Messaging.Azure.Attributes
         public TimeSpan TimeToLive { get; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ServiceBusTopicAttribute"/> class.
+        /// Initializes a new instance of the <see cref="TopicAttribute"/> class.
         /// Configures topic name for this message with default time to live value of 7 days
         /// </summary>
-        /// <param name="topicName">The Azure Service Bus topic name to send this message to</param>
-        public ServiceBusTopicAttribute(string topicName)
+        /// <param name="topicName">The topic name to send this message to</param>
+        public TopicAttribute(string topicName)
             : this(topicName, 7)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ServiceBusTopicAttribute"/> class.
+        /// Initializes a new instance of the <see cref="TopicAttribute"/> class.
         /// Configures topic name and time to live value in days for the message
         /// </summary>
-        /// <param name="topicName">The Azure Service Bus topic name to send this message to</param>
+        /// <param name="topicName">The topic name to send this message to</param>
         /// <param name="timeToLiveInDays">The time to live value in days</param>
-        public ServiceBusTopicAttribute(string topicName, int timeToLiveInDays)
+        public TopicAttribute(string topicName, int timeToLiveInDays)
             : this(topicName, TimeSpan.FromDays(timeToLiveInDays))
         {
         }
 
-        private ServiceBusTopicAttribute(string topicName, TimeSpan timeToLive)
+        private TopicAttribute(string topicName, TimeSpan timeToLive)
         {
             if (string.IsNullOrWhiteSpace(topicName))
             {

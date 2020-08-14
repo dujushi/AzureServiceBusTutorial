@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using AutoFixture;
 using AutoFixture.Xunit2;
 using FluentAssertions;
-using Messaging.Azure.Attributes;
+using Messaging.Attributes;
 using Messaging.Azure.UnitTests.Models;
 using Messaging.Exceptions;
 using Microsoft.Azure.ServiceBus;
@@ -24,7 +24,7 @@ namespace Messaging.Azure.UnitTests
             action.Should().Throw<ObjectCreationException>()
                 .WithInnerException<TargetInvocationException>()
                 .WithInnerException<MessagingException>()
-                .WithMessage($"Topic message should be decorated with the {nameof(ServiceBusTopicAttribute)}.");
+                .WithMessage($"Topic message should be decorated with the {nameof(TopicAttribute)}.");
         }
 
         [Theory, AutoMockData]

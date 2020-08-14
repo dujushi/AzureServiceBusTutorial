@@ -1,9 +1,9 @@
 ﻿using System;
-using Messaging.Azure.Attributes;
+using Messaging.Attributes;
 
 namespace Messaging.Azure.Demo.Models
 {
-    [ServiceBusTopic("test")]
+    [Topic("UserChanged")]
     public class SampleTopicMessage
     {
         public int SampleId { get; set; }

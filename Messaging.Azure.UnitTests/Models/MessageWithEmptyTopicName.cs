@@ -1,8 +1,8 @@
-﻿using Messaging.Azure.Attributes;
+﻿using Messaging.Attributes;
 
 namespace Messaging.Azure.UnitTests.Models
 {
-    [ServiceBusTopic("")]
+    [Topic("")]
     public class MessageWithEmptyTopicName
     {
     }
