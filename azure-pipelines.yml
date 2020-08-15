@@ -54,7 +54,6 @@ steps:
   displayName: NuGet push
   inputs:
     command: push
-    arguments: '-ApiKey $(NuGetApiKey) -Source https://api.nuget.org/v3/index.json'
+    arguments: '$(Build.ArtifactStagingDirectory)/*.nupkg -ApiKey $(NuGetApiKey) -Source https://api.nuget.org/v3/index.json'
     nuGetFeedType: external
-    versioningScheme: byEnvVar
-    versionEnvVar: Build.BuildNumber
+    versioningScheme: byBuildNumber
