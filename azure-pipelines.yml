@@ -49,11 +49,5 @@ steps:
     nobuild: true
     versioningScheme: 'off'
     buildProperties: 'PackageVersion=$(Build.BuildNumber)'
- 
-- task: NuGetCommand@2
-  displayName: NuGet push
-  inputs:
-    command: push
-    arguments: '$(Build.ArtifactStagingDirectory)/*.nupkg -ApiKey $(NuGetApiKey) -Source https://api.nuget.org/v3/index.json'
-    nuGetFeedType: external
-    versioningScheme: byBuildNumber
+    
+- script: dotnet nuget push $(Build.ArtifactStagingDirectory)/*.nupkg -k $(NuGetApiKey) -s https://api.nuget.org/v3/index.json
