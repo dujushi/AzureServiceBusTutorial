@@ -27,4 +27,4 @@ steps:
   displayName: Publish code coverage report
   inputs:
     codeCoverageTool: 'Cobertura'
-    summaryFileLocation: '**/coverage.cobertura.xml'
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/coverage.cobertura.xml'
