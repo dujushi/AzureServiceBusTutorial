@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Messaging.Azure\Messaging.Azure.csproj" />
+    <ProjectReference Include="..\Messaging.Azure\Dujushi.Messaging.Azure.csproj" />
   </ItemGroup>
 
 </Project>
