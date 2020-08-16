@@ -26,10 +26,10 @@ steps:
   displayName: Publish code coverage report
   inputs:
     codeCoverageTool: 'Cobertura'
-    summaryFileLocation: '$(Agent.TempDirectory)/**/coverage.cobertura.xml'
+    summaryFileLocation: '$(Build.SourcesDirectory)/**/coverage.cobertura.xml'
     
 - script: dotnet pack --no-build --configuration $(buildConfiguration) -p:PackageVersion=$(Build.BuildNumber)
   displayName: Pack
     
-- script: dotnet nuget push $(Build.ArtifactStagingDirectory)/*.nupkg -k $(NuGetApiKey) -s https://api.nuget.org/v3/index.json
+- script: dotnet nuget push $(Build.SourcesDirectory)/**/*.nupkg -k $(NuGetApiKey) -s https://api.nuget.org/v3/index.json
   displayName: Push to nuget.org
